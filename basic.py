@@ -27,6 +27,18 @@ def display_frame_stack(frames, cols=5):
 
     plt.show()
 
+def move_circle_up(frames):
+    starting_position = (16,32)
+    movement_vector = (0,-3)
+
+    for i in range(len(frames)):
+        pos_vector = (starting_position[0] + i * movement_vector[0], starting_position[1] + i * movement_vector[1])
+        print(pos_vector)
+        frames[i] = cv2.circle(frames[i], pos_vector, 12, (255,0,0), lineType=8, thickness=-1)
+
+    return frames
+
 frames = create_frame_stack(10)
+frames = move_circle_up(frames)
 print(len(frames))
 display_frame_stack(frames)
