@@ -39,5 +39,5 @@ class moving_shape_string:
 
 
 
-mos = moving_shape_string()
-print(mos.caption_string)
+#mos = moving_shape_string()
+#print(mos.caption_string)
