@@ -13,6 +13,15 @@ colors = [
     "purple"
 ]
 
+color_rgb_values = {
+    "red": (255,0,0),
+    "blue": (0,0,255),
+    "green": (0,255,0),
+    "yellow": (255,0,0),
+    "orange": (255,0,0),
+    "purple": (255,0,0)
+}
+
 shapes = [
     "circle",
     "square",
@@ -26,17 +35,17 @@ directions = [
     "right"
 ]
 
-class moving_shape_string:
-    def __init__(self):
-        self.color = random.randint(0,len(colors)-1)
-        self.shape = random.randint(0,len(shapes)-1)
-        self.direction = random.randint(0,len(directions)-1)
 
-        s = "a " + colors[self.color] + " " + shapes[self.shape]
-        s += " moving " + directions[self.direction]
+class moving_shape_string:
+    def __init__(self, color, shape, direction):
+        self.color = colors[color]
+        self.shape = shapes[shape]
+        self.direction = directions[direction]
+
+        s = "a " + self.color + " " + self.shape
+        s += " moving " + self.direction
         
         self.caption_string = s
-
 
 
 #mos = moving_shape_string()
