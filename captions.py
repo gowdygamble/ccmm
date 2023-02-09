@@ -35,6 +35,13 @@ directions = [
     "right"
 ]
 
+direction_vectors = {
+    "up": (0,-1),
+    "down": (0,1),
+    "left": (-1,0),
+    "right": (1,0)
+}
+
 
 class moving_shape_string:
     def __init__(self, color, shape, direction):
