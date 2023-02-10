@@ -4,14 +4,7 @@ import random
 # it should be a structure, a class
 # that takes numbers and fills in
 
-colors = [
-    "red",
-    "blue",
-    "green",
-    "yellow",
-    "orange",
-    "purple"
-]
+
 
 color_rgb_values = {
     "red": (255,0,0),
@@ -28,12 +21,6 @@ shapes = [
     "triangle"
 ]
 
-directions = [
-    "up",
-    "down",
-    "left",
-    "right"
-]
 
 direction_vectors = {
     "up": (0,-1),
@@ -43,15 +30,18 @@ direction_vectors = {
 }
 
 
-class moving_shape_string:
+class moving_shape:
     def __init__(self, color, shape, direction):
-        self.color = colors[color]
-        self.shape = shapes[shape]
-        self.direction = directions[direction]
+        self.color = color
+        self.color_rgb = color_rgb_values[color]
+
+        self.shape = shape
+
+        self.direction = direction
+        self.direction_vector = direction_vectors[direction]
 
         s = "a " + self.color + " " + self.shape
         s += " moving " + self.direction
-        
         self.caption_string = s
 
 
