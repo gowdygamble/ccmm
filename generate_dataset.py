@@ -27,6 +27,9 @@ def apply_moving_object(frames, moving_object):
     color = moving_object.color_rgb
     shape = moving_object.shape
 
+    start_vector = # this will depend on the position vector
+    #blegh, need some kind of relationship to the center here
+
     for i in range(len(frames)):
 
         
