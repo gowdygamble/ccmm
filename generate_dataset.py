@@ -3,10 +3,6 @@ from basic import *
 
 import cv2
 
-z = len(captions.shapes) * len(captions.directions) * len(captions.colors)
-
-print("Total combinations:", z)
-
 # plan:
 # iterate over all combinations
 # up to some maximum in case it gets crazy
@@ -47,8 +43,12 @@ def apply_moving_object(frames, moving_object):
 
 
 
-for s in range(len(captions.shapes)):
-    for c in range(len(captions.colors)):
-        for d in range(len(captions.directions)):
-            moving_object = captions.moving_shape_string(c,s,d)
-            #print(moving_object.caption_string)
+# for s in range(len(captions.shapes)):
+#     for c in range(len(captions.colors)):
+#         for d in range(len(captions.directions)):
+#             moving_object = captions.moving_shape_string(c,s,d)
+#             #print(moving_object.caption_string)
+
+moving_object = captions.moving_shape("green","square","down")
+frames = create_frame_stack(10)
+apply_moving_object(frames, moving_object)
