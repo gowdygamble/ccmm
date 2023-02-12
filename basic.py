@@ -55,11 +55,11 @@ def alternate_circles_squares(frames):
     return frames
 
 
-frames = create_frame_stack(10)
-frames = move_circle_up(frames)
-print(len(frames))
-display_frame_stack(frames)
+# frames = create_frame_stack(10)
+# frames = move_circle_up(frames)
+# print(len(frames))
+# display_frame_stack(frames)
 
-frames = create_frame_stack(10)
-frames = alternate_circles_squares(frames)
-display_frame_stack(frames)
+# frames = create_frame_stack(10)
+# frames = alternate_circles_squares(frames)
+# display_frame_stack(frames)
