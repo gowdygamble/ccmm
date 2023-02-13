@@ -29,12 +29,12 @@ def draw_square(img, center, color):
 
 def create_start_point_from_direction(direction_vector, frame_size=32):
     center_point = (int(frame_size/2), int(frame_size/2))
-    start_point = (center_point[0] + -10 * direction_vector[0],
-                    center_point[1] + -10 * direction_vector[1])
+    start_point = (center_point[0] + -15 * direction_vector[0] + random.randint(-5,5),
+                    center_point[1] + -15 * direction_vector[1] + random.randint(-5,5))
     return start_point
 
 def apply_moving_object(frames, moving_object):
-    direction_vector = moving_object.direction_vector
+    direction_vector = moving_object.direction_vector * random.randint(1,10)
     color = moving_object.color_rgb
     shape = moving_object.shape
 
@@ -70,7 +70,7 @@ def display_frame_stack(frames, cols=5):
 
     plt.show()
 
-moving_object = captions.moving_shape("blue","circle","left")
+moving_object = captions.moving_shape("red","square","down")
 frames = create_frame_stack(10)
 apply_moving_object(frames, moving_object)
 display_frame_stack(frames)
