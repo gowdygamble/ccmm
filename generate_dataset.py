@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import math
 import random
 
+from utils import write_frames_to_video
+
 # plan:
 # iterate over all combinations
 # up to some maximum in case it gets crazy
@@ -74,3 +76,5 @@ moving_object = captions.moving_shape("red","square","down")
 frames = create_frame_stack(10)
 apply_moving_object(frames, moving_object)
 display_frame_stack(frames)
+
+write_frames_to_video(frames)
