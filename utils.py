@@ -16,3 +16,6 @@ def write_frames_to_video(frames, fps = 2):
         # so "red" -> blue here
         out.write(np.array(frames[i]).astype('uint8'))
     out.release()
+
+def prepare_row_for_csv(moving_object):
+    pass

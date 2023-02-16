@@ -1,10 +1,5 @@
 import random
 
-# this isn't a good structure for the caption strings
-# it should be a structure, a class
-# that takes numbers and fills in
-
-
 
 color_rgb_values = {
     "red": (255,0,0),
@@ -28,6 +23,11 @@ direction_vectors = {
     "left": (-1,0),
     "right": (1,0)
 }
+
+class background:
+    def __init__(self, color):
+        self.color = color
+        self.color_rgb = color_rgb_values[color]
 
 
 class moving_shape:
