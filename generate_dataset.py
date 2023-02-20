@@ -81,5 +81,3 @@ frames = create_frame_stack(10)
 
 apply_moving_object(frames, moving_object)
 display_frame_stack(frames)
-
-write_frames_to_video(frames)
