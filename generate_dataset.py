@@ -7,6 +7,8 @@ import random
 
 from utils import write_frames_to_video
 
+from write_csv import write_dataset_to_csv
+
 # plan:
 # iterate over all combinations
 # up to some maximum in case it gets crazy
@@ -19,6 +21,10 @@ from utils import write_frames_to_video
 # function
 # input: object, color, direction, frames
 # look up all the correct values and return the frames
+
+def generate_dataset_row():
+    # take in information about the color, shape, direction, etc
+    pass
 
 def draw_circle(img, center, color):
     cv2.circle(img, center, 12, color, lineType=8, thickness=-1)
