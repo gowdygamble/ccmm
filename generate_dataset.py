@@ -52,6 +52,7 @@ def apply_moving_object(frames, moving_object):
         current_position = (start_vector[0] + direction_vector[0] * i * 2,
                             start_vector[1] + direction_vector[1] * i * 2)
         print(current_position, color)
+        # make this more general
         if shape == "circle":
             draw_circle(frame, current_position, color)
         else:
