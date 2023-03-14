@@ -79,8 +79,12 @@ def display_frame_stack(frames, cols=5):
 
     plt.show()
 
-def apply_background():
-    pass
+def apply_background(frame, bg_color):
+    r, c = frame.shape[0], frame.shape[1]
+    for i in range(r):
+        for j in range(c):
+            pass # this seems like a bad way to do it
+    
 
 moving_object = captions.moving_shape("red","square","down")
 background = captions.background("blue")
